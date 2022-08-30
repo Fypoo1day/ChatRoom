@@ -2915,7 +2915,7 @@ const state = {
                 "content-type": "application/json"
             },
             body: JSON.stringify({
-                nombre: nombreDelState,
+                from: nombreDelState,
                 message: message
             })
         });
@@ -20389,7 +20389,7 @@ class ChatPage extends HTMLElement {
     }
     render() {
         this.innerHTML = `\n    <div>\n    <h1>Chat Page</h1>\n      <div class="messages">\n        ${this.messages.map((m)=>{
-            return `<div class="message">${m.from}:${m.message}</div>`;
+            return `<div class="message">${m.from}: ${m.message}</div>`;
         }).join("")}\n      </div>\n      <form class="submit-message">\n          <input type="text" name="new-message">\n          <button>Enviar</button>\n      </form>                \n    </div>\n   `;
         this.addListeners();
     }

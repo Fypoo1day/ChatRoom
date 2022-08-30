@@ -34,7 +34,7 @@ class ChatPage extends HTMLElement {
       <div class="messages">
         ${this.messages
           .map((m) => {
-            return `<div class="message">${m.from}:${m.message}</div>`;
+            return `<div class="message">${m.from}: ${m.message}</div>`;
           })
           .join("")}
       </div>
